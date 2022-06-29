@@ -1,5 +1,134 @@
-html{
-    margin: 0;
-    padding: 0;
-    border: 0;
+html {
+  font-family: "Raleway", sans-serif;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.336);
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body *,
+body button {
+  cursor: none !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+}
+
+html {
+  color: #efefef;
+  background-color: #212830;
+}
+a {
+  text-decoration: none;
+  color: aquamarine;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2rem;
+}
+p {
+  width: 40%;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #c5cbd1;
+}
+@keyframes cursor-loop {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border: 0.2rem double #77e7c2;
+  border-style: dashed;
+  position: fixed;
+  overflow: hidden;
+  border-radius: 5rem;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation-name: cursor-loop;
+  animation-timing-function: linear;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.cursor:hover {
+  width: 2rem;
+  height: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  direction: rtl;
+  position: absolute;
+  top: 50%;
+  right: 0rem;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav h3 {
+  margin-right: 1rem;
+}
+
+nav li {
+  transition: all 0.4s ease-in-out;
+  max-height: 0.7rem;
+  min-width: 3rem;
+  /* background-color: white; */
+  margin: 1.7rem 0;
+}
+
+nav ul {
+  padding: 0;
+  margin-right: 2rem;
+}
+
+nav li a {
+  font-size: 1.8rem;
+  transition: all 0.4s ease-in-out;
+  color: white;
+  display: inline-block;
+  transform: rotate(-10deg) skew(-10deg, 0);
+  transform-origin: top right;
+}
+
+nav li a:hover {
+  color: aquamarine;
+}
+
+nav li:hover {
+  /* background-color: rgb(226, 146, 146); */
+  width: 5;
+}
+
+.Soical {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.Soical > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
